@@ -8,5 +8,3 @@ pub fn read_input() -> Vec<String> {
 
     reader.lines().map(|l| l.unwrap()).collect()
 }
-
-fn main() {}

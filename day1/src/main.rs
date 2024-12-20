@@ -1,5 +1,4 @@
-use std::fs::File;
-use std::io::{BufRead, BufReader};
+use common::read_input;
 
 fn main() {
     let lines = read_input();
@@ -12,14 +11,6 @@ fn main() {
     println!("Result: {}", first_part(list_a.clone(), list_b.clone()));
     println!("Result: {}", second_parte(list_a.clone(), list_b.clone()));
 
-}
-
-fn read_input() -> Vec<String> {
-    let file = File::open("./resources/input.txt").expect("File not found");
-
-    let reader = BufReader::new(file);
-
-    reader.lines().map(|l| l.unwrap()).collect()
 }
 
 fn parse_input(lines: Vec<String>) -> (Vec<i32>, Vec<i32>) {
