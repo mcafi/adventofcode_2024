@@ -1,7 +1,5 @@
-use common::read_input;
-
 fn main() {
-    let lines = read_input();
+    let lines = common::read_input();
 
     let (mut list_a, mut list_b) = parse_input(lines);
 
